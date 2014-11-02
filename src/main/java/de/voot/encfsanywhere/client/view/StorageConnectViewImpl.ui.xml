@@ -1,0 +1,48 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.important {
+		font-weight: bold;
+		}
+	</ui:style>
+
+	<g:HTMLPanel>
+		<h3 class="mbl pbl">Select storage provider</h3>
+		<div class="row">
+			<div class="span3">
+				<h4 class="dropbox-logo">Dropbox</h4>
+			</div>
+			<div class="span6">
+				<div class="login-form">
+					<g:CheckBox ui:field="stayConnectedCheckbox">
+						Keep
+						browser connected with Dropbox
+						<small style="display: block">Saves the OAuth token in the browser's local
+							storage.</small>
+					</g:CheckBox>
+					<g:CheckBox ui:field="provideAPIKey">
+						Self host EncfsAnywhere and/or use own Dropbox API key 
+						<small style="display: block">The API key is linked to the location EncfsAnyhwere is hosted - if you host it yourself, you need to provide your own API Key.</small>
+					</g:CheckBox>
+					<div id="ownDropboxKeyInstructions"  style="margin-left: 32px; display: none">
+						<small>Go <a href="https://www.dropbox.com/developers/apps">here</a> and take the following steps:
+						    <ol>
+						        <li>Create a new app</li>
+						        <li>Choose "Dropbox API app"</li>
+						        <li>Choose "Files and datastores"</li>
+						        <li>Choose "Yes" or "No", depending if EncfsAnyhwere should have full Dropbox access or only app folder access</li>
+						        <li>Enter any name you like</li>
+						        <li>Add the URL you host EncfsAnywhere to the OAuth2 Redirect URIs (e.g. http://your.host/somewhere/EncfsAnywhere.html)</li>
+						        <li>Enter the App key in the field below</li>
+						    </ol>
+					    </small>
+					 <g:TextBox ui:field="dropboxApiKey" styleName="input-block-level" />
+					</div>
+					<g:Button ui:field="connectDropboxButton" text="Connect with Dropbox"
+						styleName="btn btn-primary btn-large btn-block" />
+				</div>
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

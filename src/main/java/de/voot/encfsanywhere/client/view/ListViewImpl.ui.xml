@@ -1,0 +1,60 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+	<g:HTMLPanel>
+	
+		<div id="passwordEntryPrompt" class="overlay">
+			<div class="container">
+				<div class="row" style="margin-top: 200px;">
+					<div class="offset2 span2">
+				        <div class="flatui-icon">
+							<img src="EncfsAnywhere/images/Pensils@2x.png" />
+						</div>
+				    </div>
+					<div class="span4">
+						<div class="login-form">
+							<div class="control-group">
+								<g:PasswordTextBox styleName="login-field unlockPassword" ui:field="password" />
+			            	</div>
+							<div class="control-group">
+								<g:Button styleName="btn btn-primary btn-block btn-large" ui:field="loginButton" text="Login" />
+								<g:Button styleName="btn  btn-block btn-large btn-danger" ui:field="cancelButton" text="Cancel" />
+							</div>
+							<small>Lost	your Password? Well, that's a problem.</small>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="offset10 span2" style="margin-bottom: 20px; text-align: right;">
+				<g:Button styleName="btn btn-danger" ui:field="disconnectButton" text="Disconnect" />
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span12">
+				<ul ui:field="breadcrumb" class="breadcrumb"></ul>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span12">
+				<g:FlexTable ui:field="files"
+					styleName="table table-hover table-condensed cursor-pointer" />
+			</div>
+		</div>
+		
+		<hr />
+		
+		<h6>Downloads</h6>
+		<div class="row">
+			<div class="span12">
+				<g:FlexTable ui:field="downloads"
+					styleName="table table-condensed" />
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

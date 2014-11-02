@@ -1,0 +1,12 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<g:HTMLPanel>
+		<div class="alert alert-block">
+			<g:Button ui:field="closeButton" styleName="close">&times;</g:Button>
+			<h4 ui:field="caption"></h4>
+			<g:HTML ui:field="text"></g:HTML>
+		</div>
+		
+	</g:HTMLPanel>
+</ui:UiBinder> 
